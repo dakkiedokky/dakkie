@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경력기술서 - 박다영</title>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #111827;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --text-light: #9ca3af;
+            --bg-body: #f3f4f6;
+            --bg-card: #ffffff;
+            --bg-subtle: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue',
+                'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 10mm;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 40px auto;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            padding: 70px 80px;
+        }
+
+        /* Header */
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-left {
+            max-width: 800px;
+        }
+
+        .header-left .name-role {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 14px;
+        }
+
+        .header-left h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .header-left .role {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .header-left .intro {
+            font-size: 0.97rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+            word-break: keep-all;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            flex-shrink: 0;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            align-items: flex-end;
+            margin-bottom: 14px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .link-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-end;
+        }
+
+        .link-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.83rem;
+            transition: color 0.15s;
+        }
+
+        .link-info a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Two Column Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            gap: 60px;
+        }
+
+        /* Section Label Style */
+        .section-title {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            margin-bottom: 22px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .career-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .career-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .career-header {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 5px;
+        }
+
+        .company-logo-wrap {
+            width: 42px;
+            height: 24px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background: white;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 3px;
+            overflow: hidden;
+        }
+
+        .company-logo-wrap img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .company-logo-text {
+            width: 42px;
+            height: 24px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.55rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            flex-shrink: 0;
+            letter-spacing: -0.3px;
+        }
+
+        .career-company {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .career-period {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .career-role-badge {
+            display: inline-block;
+            font-size: 0.77rem;
+            color: var(--text-muted);
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            padding: 2px 8px;
+            margin-bottom: 8px;
+            width: fit-content;
+        }
+
+        .career-desc {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            padding-left: 12px;
+        }
+
+        .career-desc li {
+            position: relative;
+            margin-bottom: 4px;
+            list-style: none;
+            line-height: 1.55;
+        }
+
+        .career-desc li::before {
+            content: '·';
+            position: absolute;
+            left: -12px;
+            color: var(--text-light);
+        }
+
+        .skills-section {
+            margin-top: 34px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        .edu-section {
+            margin-top: 30px;
+        }
+
+        .edu-item {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .edu-school {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .edu-detail {
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        .cert-list {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .cert-item {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 8px;
+        }
+
+        .cert-item span:first-child {
+            color: var(--text-light);
+            flex-shrink: 0;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .achievement-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .achievement-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 22px 26px;
+            border-radius: 6px;
+        }
+
+        .achievement-title {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 9px;
+        }
+
+        .achievement-desc {
+            font-size: 0.91rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .service-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .service-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px dashed var(--border-color);
+            align-items: start;
+        }
+
+        .service-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .service-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .service-info .service-name {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.4;
+        }
+
+        .service-info .service-company {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .service-info .service-link {
+            font-size: 0.8rem;
+        }
+
+        .service-info .service-link a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .service-info .service-link a:hover {
+            color: var(--text-muted);
+            text-decoration: underline;
+        }
+
+        .service-details {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+        }
+
+        .service-task {
+            margin-bottom: 13px;
+        }
+
+        .service-task:last-of-type {
+            margin-bottom: 10px;
+        }
+
+        .service-task b {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+            font-size: 0.93rem;
+        }
+
+        .service-task ul {
+            list-style: none;
+        }
+
+        .service-task ul li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 5px;
+            line-height: 1.65;
+            color: var(--text-main);
+            font-size: 0.88rem;
+        }
+
+        .service-task ul li::before {
+            content: '-';
+            position: absolute;
+            left: 0;
+            color: var(--text-light);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .tech-tag {
+            background-color: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        @media print {
+            body {
+                background: white;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 10px;
+                max-width: 100%;
+                border-radius: 0;
+                border: none;
+            }
+
+            .header-wrapper {
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .service-item {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .header-wrapper {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+
+            .contact-info,
+            .link-info {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="header-left">
+                <div class="name-role">
+                    <h1>박다영</h1>
+                    <span class="role">서비스 기획 · Product Planner</span>
+                </div>
+                <div class="intro">
+                    <p>게임 데이터를 기반으로 유저 참여와 서비스 흐름을 설계하는 기획자입니다.<br>
+                        이스포츠 리그 플랫폼 및 통계 서비스, 커뮤니티를 포함한 B2C 게임 서비스 전반을 0→1로 구축한 경험이 있으며,<br>
+                        SQL과 Grafana를 활용해 데이터를 직접 분석하고 IT 제품을 기획하는 것에 관심이 많습니다.</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="contact-info">
+                    <span>010-2304-4172</span>
+                    <span>dy000123@gmail.com</span>
+                </div>
+                <div class="link-info">
+                    <a href="https://dakkie.notion.site/d6153dd304084a838fe40a160266f135" target="_blank">Notion Portfolio ↗</a>
+                    <a href="https://linkedin.com/dakkie" target="_blank">LinkedIn ↗</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="left-col">
+                <h2 class="section-title">Career</h2>
+                <div class="career-list">
+                    <div class="career-item">
+                        <div class="career-header">
+                            <div class="company-logo-wrap">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Nexon_Logo.svg" alt="NEXON" onerror="this.parentElement.outerHTML='<div class='company-logo-text'>NEXON</div>'">
+                            </div>
+                            <span class="career-company">넥슨코리아 (NEXON)</span>
+                        </div>
+                        <span class="career-period">2025.01 - 재직중 · 1년 4개월</span>
+                        <span class="career-role-badge">서비스 기획 · 정규직</span>
+                        <ul class="career-desc">
+                            <li>서든어택 E-Sports 플랫폼 0→1 기획 전담</li>
+                            <li>서든어택 승부예측 이벤트 플랫폼 기획 · 운영</li>
+                            <li>Grafana 대시보드 기획 · SQL 자체 분석 체계 구축</li>
+                            <li>FPS 장르 라이브 서비스 기획 · 운영</li>
+                        </ul>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-header">
+                            <div class="company-logo-wrap">
+                                <img src="https://logo.clearbit.com/op.gg" alt="OP.GG" onerror="this.parentElement.outerHTML='<div class='company-logo-text'>OP.GG</div>'">
+                            </div>
+                            <span class="career-company">오피지지 (OP.GG)</span>
+                        </div>
+                        <span class="career-period">2021.06 - 2024.05 · 3년</span>
+                        <span class="career-role-badge">서비스 기획/PM · 정규직</span>
+                        <ul class="career-desc">
+                            <li>MAU 150만 커뮤니티 서비스 기획 · PM</li>
+                            <li>PEEP 신규 프로덕트 기획 및 런칭</li>
+                            <li>AllT 모바일 앱 상위 기획</li>
+                        </ul>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-header">
+                            <div class="company-logo-wrap">
+                                <img src="https://logo.clearbit.com/musinsa.com" alt="무신사" onerror="this.parentElement.outerHTML='<div class='company-logo-text'>MUSINSA</div>'">
+                            </div>
+                            <span class="career-company">무신사 (MUSINSA)</span>
+                        </div>
+                        <span class="career-period">2020.05 - 2021.06 · 1년 2개월</span>
+                        <span class="career-role-badge">서비스 기획 · 정규직</span>
+                        <ul class="career-desc">
+                            <li>신사업 SNAP 서비스 기획 및 초기 운영</li>
+                            <li>크리에이터 50명+ 영입 · 매니지먼트</li>
+                        </ul>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-header">
+                            <div class="company-logo-wrap">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Logo_SNOW.svg" alt="SNOW" onerror="this.parentElement.outerHTML='<div class='company-logo-text'>SNOW</div>'">
+                            </div>
+                            <span class="career-company">스노우 (SNOW)</span>
+                        </div>
+                        <span class="career-period">2019.06 - 2019.12 · 7개월</span>
+                        <span class="career-role-badge">서비스 기획 · 인턴</span>
+                        <ul class="career-desc">
+                            <li>ZEPETO WORLD 서비스 운영 및 기획</li>
+                            <li>MAU 490만 메타버스 앱 모니터링 · VOC 관리</li>
+                        </ul>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-header">
+                            <div class="company-logo-wrap">
+                                <img src="https://www.dingoglobal.com/theme/responsive_makeus/include/img/logo.svg" alt="Dingo" onerror="this.parentElement.outerHTML='<div class='company-logo-text'>dingo</div>'">
+                            </div>
+                            <span class="career-company">메이크어스 (딩고)</span>
+                        </div>
+                        <span class="career-period">2018.08 - 2018.12 · 5개월</span>
+                        <span class="career-role-badge">채널 운영 · 인턴</span>
+                        <ul class="career-desc">
+                            <li>Dingo 채널 운영 및 콘텐츠 기획/제작</li>
+                            <li>2개월 채널 인터렉션 누적 110K 상승</li>
+                        </ul>
+                    </div>
+                    <div class="career-item">
+                        <div class="career-header">
+                            <div class="company-logo-wrap">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/KBS_logo_2023.svg" alt="KBS" onerror="this.parentElement.outerHTML='<div class='company-logo-text'>KBS</div>'">
+                            </div>
+                            <span class="career-company">한국방송공사 (KBS)</span>
+                        </div>
+                        <span class="career-period">2018.06 - 2018.08 · 3개월</span>
+                        <span class="career-role-badge">콘텐츠 기획 · 인턴</span>
+                        <ul class="career-desc">
+                            <li>KBS1 저널리즘 토크쇼 J 디지털 콘텐츠 기획/제작</li>
+                            <li>방송 주제 리서치 · 편집 구성안 제작 · 채널 운영</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">Google Analytics</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Notion</span>
+                        <span class="skill-tag">JIRA</span>
+                        <span class="skill-tag">Confluence</span>
+                        <span class="skill-tag">데이터 분석</span>
+                        <span class="skill-tag">UX 기획</span>
+                        <span class="skill-tag">이벤트 기획</span>
+                        <span class="skill-tag">콘텐츠 전략</span>
+                    </div>
+                </div>
+
+                <div class="edu-section">
+                    <h2 class="section-title">Education &amp; Certs</h2>
+                    <div class="edu-item">
+                        <span class="edu-school">가천대학교</span>
+                        <span class="edu-detail">2014.03 - 2020.02 · 미디어커뮤니케이션학과 졸업</span>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <span>2026.03</span>
+                            <span>SQLD (데이터자격검정)</span>
+                        </div>
+                        <div class="cert-item">
+                            <span>2020.02</span>
+                            <span>GAIQ (Google Analytics Individual Qualification)</span>
+                        </div>
+                        <div class="cert-item">
+                            <span>2020.02</span>
+                            <span>OPIc IH · 영어 비즈니스 레벨</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="right-col right-section">
+                <section>
+                    <h2 class="section-title">Key Achievements</h2>
+                    <div class="achievement-list">
+                        <div class="achievement-item">
+                            <h3 class="achievement-title">이스포츠 리그 플랫폼 0→1 기획 전담: 서든어택 E-Sports</h3>
+                            <p class="achievement-desc">서든어택 공식 E-Sports 리그 플랫폼을 단독으로 0→1 기획 전담했습니다. 게임 서버 데이터 한계를 어드민으로 보완하는 데이터 계층 구조를 설계하고, force_win / winner_team_id 필드 추가 등 개발팀과 API 스펙을 직접 협의했습니다. 라운드 그룹핑 기반 세트/매치 생성 시스템과 실격·미출전 케이스별 3가지 분기 정책, 통계 무결성 보호를 위한 가짜 라운드 정책을 수립하여 데이터 신뢰도를 확보했습니다.</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h3 class="achievement-title">DA 리소스 없이 자체 데이터 분석 체계 구축: Grafana / SQL</h3>
+                            <p class="achievement-desc">별도 DA 조직 없이 Grafana 대시보드를 기획·구축했습니다. 데이터 소스 정의부터 6개 콘텐츠 영역의 핵심 지표 설계, 시각화 전 과정을 주도하고 SQL을 직접 작성해 자체 데이터 추출 및 분석을 수행했습니다. 이를 기반으로 S1 회고를 S2 설계에 반영하여 승부예측 참여 COUNT +18.76%, 포인트 소비 UU +23.48%, 상점 교환 UU +16.52%를 달성했습니다.</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h3 class="achievement-title">다수의 B2C 신규 서비스 0→1 기획 및 지표 성장 기여</h3>
+                            <p class="achievement-desc">OP.GG PEEP(Web RTC 기반 인게임 비디오 오버레이), 무신사 SNAP(스타일 공유 커뮤니티) 등 다수의 신규 서비스를 0→1로 기획하고 런칭했습니다. PEEP은 디스콰이엇 트렌딩 앱 1위를 달성했으며, OP.GG 커뮤니티 이스포츠 연동 게시판 리뉴얼로 3개월 간 신규 연동 153,273명, 게시글 생성수 +20% 성장을 이끌었습니다.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Projects</h2>
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3 class="service-name">서든어택 E-Sports 플랫폼</h3>
+                                <span class="service-company">넥슨코리아 · 2025.12 - 2026.04</span>
+                                <span class="service-link"><a href="#" target="_blank">league.sa.nexon.com ↗</a></span>
+                            </div>
+                            <div class="service-details">
+                                <div class="service-task">
+                                    <b>리그 데이터 구조 기획 및 API 스펙 협업</b>
+                                    <ul>
+                                        <li>게임 서버 데이터 한계를 어드민으로 보완하는 데이터 계층 구조 설계</li>
+                                        <li>force_win / winner_team_id 필드 추가 등 개발팀과 데이터 구조 레벨 협의 직접 수행</li>
+                                        <li>레거시 엑셀 대회 데이터 가공·구조화 후 기획서 반영 (데이터 마이그레이션 기획)</li>
+                                    </ul>
+                                </div>
+                                <div class="service-task">
+                                    <b>매치 관리 어드민 기획</b>
+                                    <ul>
+                                        <li>라운드 그룹핑 기반 세트/매치 생성 시스템 설계</li>
+                                        <li>정상 플레이 / 실격-데이터 있음 / 실격-데이터 없음 3가지 케이스 분기 정책 수립</li>
+                                    </ul>
+                                </div>
+                                <div class="service-task">
+                                    <b>통계 무결성 정책 수립 및 선수 통계 서비스 기획</b>
+                                    <ul>
+                                        <li>미출전·미진행 케이스 대응 가짜 라운드 정책, KDA 0 처리 기준 수립</li>
+                                        <li>기존 유저 기록실 분석을 레퍼런스로 활용한 프로 선수 특화 지표 체계 도출</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">SQL</span>
+                                    <span class="tech-tag">Grafana</span>
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">Notion</span>
+                                    <span class="tech-tag">JIRA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3 class="service-name">서든어택 승부예측 서비스</h3>
+                                <span class="service-company">넥슨코리아 · 2025.03 - 2026.04</span>
+                                <span class="service-link"><a href="#" target="_blank">sa.nexon.com ↗</a></span>
+                            </div>
+                            <div class="service-details">
+                                <div class="service-task">
+                                    <b>이벤트 플랫폼 기획 · 운영 및 지표 개선</b>
+                                    <ul>
+                                        <li>리그 시즌 유저 참여를 위한 승부예측 이벤트 플랫폼 기획 및 운영</li>
+                                        <li>S1 자체 회고 → S2 설계 반영: 포인트 소비 UU +23.48% / 참여 COUNT +18.76% / 상점 교환 UU +16.52%</li>
+                                        <li>참여 UU +5.88% 대비 COUNT +18.76% → 코어 유저 리텐션 강화 확인</li>
+                                    </ul>
+                                </div>
+                                <div class="service-task">
+                                    <b>Grafana 대시보드 기획 · 구축 및 자체 분석 체계 수립</b>
+                                    <ul>
+                                        <li>데이터 소스 정의 → 6개 콘텐츠 영역 지표 설계 → 시각화 전 과정 주도</li>
+                                        <li>SQL 직접 작성으로 자체 데이터 추출·분석 수행 (SQLD 취득)</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">SQL</span>
+                                    <span class="tech-tag">Grafana</span>
+                                    <span class="tech-tag">Figma</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3 class="service-name">OP.GG 커뮤니티 서비스</h3>
+                                <span class="service-company">오피지지 · 2023.06 - 2024.05</span>
+                                <span class="service-link"><a href="#" target="_blank">op.gg/community ↗</a></span>
+                            </div>
+                            <div class="service-details">
+                                <div class="service-task">
+                                    <b>MAU 150만 커뮤니티 서비스 기획 · PM (Web/App/Admin)</b>
+                                    <ul>
+                                        <li>이스포츠 연동 게시판 리뉴얼: 3개월 간 신규 연동 153,273명, 게시글 생성수 +20%</li>
+                                        <li>인기글 알고리즘 'hotness score' 정책 기획, AI 댓글봇 GGBOT 기획 (유저 댓글 +7%)</li>
+                                        <li>GA Looker 대시보드 구축: 핵심 지표 설정 / 이벤트 트래킹 설계서 작성 (DA, 프론트 협업)</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Google Analytics</span>
+                                    <span class="tech-tag">Looker</span>
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">JIRA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3 class="service-name">PEEP</h3>
+                                <span class="service-company">오피지지 · 2021.06 - 2023.03</span>
+                                <span class="service-link"><a href="#" target="_blank">peep.gg ↗</a></span>
+                            </div>
+                            <div class="service-details">
+                                <div class="service-task">
+                                    <b>Web RTC 기반 인게임 비디오 오버레이 신규 프로덕트 기획 · 런칭</b>
+                                    <ul>
+                                        <li>랜딩 페이지 기획·리뉴얼을 통한 로그인 CTA 퍼널 설계 및 CTR 3% 전환</li>
+                                        <li>디스콰이엇 트렌딩 앱 1위 달성, 얼리 액세스 유저 400명+ 모집 및 유저 인터뷰 진행</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">Google Analytics</span>
+                                    <span class="tech-tag">Notion</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <h3 class="service-name">무신사 SNAP</h3>
+                                <span class="service-company">무신사 · 2021.01 - 2021.05</span>
+                                <span class="service-link"><a href="#" target="_blank">musinsa.com/snap ↗</a></span>
+                            </div>
+                            <div class="service-details">
+                                <div class="service-task">
+                                    <b>스타일 공유·탐색·구매 신규 서비스 초기 기획 및 운영</b>
+                                    <ul>
+                                        <li>계정 권한 정책(Master/Sub/Brand/Creator) 기획, 운영 정책/가이드 수립</li>
+                                        <li>스냅 크리에이터 50명+ 영입·매니지먼트, 300명 클로즈 베타 서비스 운영</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Figma</span>
+                                    <span class="tech-tag">Notion</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

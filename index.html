@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
+<html lang="ko"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>경력기술서 - 박다영</title>
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
-        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" rel="stylesheet">
     <style>
         :root {
             --primary-color: #111827;
@@ -48,7 +44,7 @@
             padding: 70px 80px;
         }
 
-        /* Header */
+        /* ── Header ── */
         .header-wrapper {
             display: flex;
             justify-content: space-between;
@@ -58,9 +54,7 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        .header-left {
-            max-width: 800px;
-        }
+        .header-left { max-width: 800px; }
 
         .header-left .name-role {
             display: flex;
@@ -126,18 +120,16 @@
             transition: color 0.15s;
         }
 
-        .link-info a:hover {
-            color: var(--primary-color);
-        }
+        .link-info a:hover { color: var(--primary-color); }
 
-        /* Two Column Layout */
+        /* ── Two Column Layout ── */
         .main-content {
             display: grid;
             grid-template-columns: 290px 1fr;
             gap: 60px;
         }
 
-        /* Section Label Style */
+        /* ── Section Label ── */
         .section-title {
             font-size: 0.72rem;
             font-weight: 700;
@@ -149,7 +141,7 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        /* Left Column: Career */
+        /* ── Career ── */
         .career-list {
             display: flex;
             flex-direction: column;
@@ -165,46 +157,8 @@
         .career-header {
             display: flex;
             align-items: center;
-            gap: 9px;
+            gap: 10px;
             margin-bottom: 5px;
-        }
-
-        /* 로고 컨테이너: 가로형 로고도 수용하도록 직사각형 */
-        .company-logo-wrap {
-            width: 42px;
-            height: 24px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-            background: white;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2px 3px;
-            overflow: hidden;
-        }
-
-        .company-logo-wrap img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            display: block;
-        }
-
-        .company-logo-text {
-            width: 42px;
-            height: 24px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-            background: var(--bg-subtle);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.55rem;
-            font-weight: 700;
-            color: var(--text-muted);
-            flex-shrink: 0;
-            letter-spacing: -0.3px;
         }
 
         .career-company {
@@ -251,10 +205,8 @@
             color: var(--text-light);
         }
 
-        /* Skills in left col */
-        .skills-section {
-            margin-top: 34px;
-        }
+        /* ── Skills ── */
+        .skills-section { margin-top: 34px; }
 
         .skill-tags {
             display: flex;
@@ -271,10 +223,8 @@
             font-size: 0.8rem;
         }
 
-        /* Education in left col */
-        .edu-section {
-            margin-top: 30px;
-        }
+        /* ── Education ── */
+        .edu-section { margin-top: 30px; }
 
         .edu-item {
             display: flex;
@@ -312,20 +262,20 @@
             flex-shrink: 0;
         }
 
-        /* Right Column */
+        /* ── Right Column ── */
         .right-section {
             display: flex;
             flex-direction: column;
             gap: 48px;
         }
 
+        /* ── Key Achievements ── */
         .achievement-list {
             display: flex;
             flex-direction: column;
             gap: 14px;
         }
 
-        /* 카드: 좌측 띠 없이 균등 border */
         .achievement-item {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -346,7 +296,7 @@
             line-height: 1.8;
         }
 
-        /* Projects */
+        /* ── Projects ── */
         .service-list {
             display: flex;
             flex-direction: column;
@@ -404,13 +354,8 @@
             color: var(--text-muted);
         }
 
-        .service-task {
-            margin-bottom: 13px;
-        }
-
-        .service-task:last-of-type {
-            margin-bottom: 10px;
-        }
+        .service-task { margin-bottom: 13px; }
+        .service-task:last-of-type { margin-bottom: 10px; }
 
         .service-task b {
             display: block;
@@ -419,9 +364,7 @@
             font-size: 0.93rem;
         }
 
-        .service-task ul {
-            list-style: none;
-        }
+        .service-task ul { list-style: none; }
 
         .service-task ul li {
             position: relative;
@@ -457,11 +400,7 @@
         }
 
         @media print {
-            body {
-                background: white;
-                -webkit-print-color-adjust: exact;
-            }
-
+            body { background: white; -webkit-print-color-adjust: exact; }
             .container {
                 box-shadow: none;
                 margin: 0;
@@ -470,404 +409,374 @@
                 border-radius: 0;
                 border: none;
             }
-
-            .header-wrapper {
-                margin-bottom: 30px;
-                padding-bottom: 20px;
-            }
+            .header-wrapper { margin-bottom: 30px; padding-bottom: 20px; }
         }
 
         @media screen and (max-width: 900px) {
-            .main-content {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .service-item {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
-            .header-wrapper {
-                flex-direction: column;
-                gap: 20px;
-                align-items: flex-start;
-            }
-
-            .contact-info,
-            .link-info {
-                align-items: flex-start;
-            }
+            .main-content { grid-template-columns: 1fr; gap: 50px; }
+            .service-item { grid-template-columns: 1fr; gap: 16px; }
+            .header-wrapper { flex-direction: column; gap: 20px; align-items: flex-start; }
+            .contact-info, .link-info { align-items: flex-start; }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <header class="header-wrapper">
-            <div class="header-left">
-                <div class="name-role">
-                    <h1>박다영</h1>
-                    <span class="role">서비스 기획 · Product Planner</span>
-                </div>
-                <div class="intro">
-                    <p>게임 데이터를 기반으로 유저 참여와 서비스 흐름을 설계하는 기획자입니다.<br>
-                        이스포츠 리그 플랫폼 및 통계 서비스, 커뮤니티를 포함한 B2C 게임 서비스 전반을 0→1로 구축한 경험이 있으며,<br>
-                        SQL과 Grafana를 활용해 데이터를 직접 분석하고 IT 제품을 기획하는 것에 관심이 많습니다.</p>
-                </div>
+<div class="container">
+
+    <!-- ── HEADER ── -->
+    <header class="header-wrapper">
+        <div class="header-left">
+            <div class="name-role">
+                <h1>박다영</h1>
+                <span class="role">서비스 기획 · Product Planner</span>
             </div>
-            <div class="header-right">
-                <div class="contact-info">
-                    <span>010-2304-4172</span>
-                    <span>dy000123@gmail.com</span>
-                </div>
-                <div class="link-info">
-                    <a href="https://dakkie.notion.site/d6153dd304084a838fe40a160266f135" target="_blank">Notion Portfolio ↗</a>
-                    <a href="https://linkedin.com/dakkie" target="_blank">LinkedIn ↗</a>
-                </div>
+            <div class="intro">
+                <p>게임 데이터를 기반으로 유저 참여와 서비스 흐름을 설계하는 기획자입니다.<br>
+                    이스포츠 리그 플랫폼 및 통계 서비스, 커뮤니티를 포함한 B2C 게임 서비스 전반을 0→1로 구축한 경험이 있으며,<br>
+                    SQL과 Grafana를 활용해 데이터를 직접 분석하고 IT 제품을 기획하는 것에 관심이 많습니다.</p>
             </div>
-        </header>
-
-        <div class="main-content">
-            <aside class="left-col">
-                <h2 class="section-title">Career</h2>
-                <div class="career-list">
-
-                    <!-- 넥슨코리아 -->
-                    <div class="career-item">
-                        <div class="career-header">
-                            <div class="company-logo-wrap">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Nexon_Logo.svg"
-                                    alt="NEXON"
-                                    onerror="this.parentElement.outerHTML='<div class=\'company-logo-text\'>NEXON</div>'">
-                            </div>
-                            <span class="career-company">넥슨코리아 (NEXON)</span>
-                        </div>
-                        <span class="career-period">2025.01 - 재직중 · 1년 4개월</span>
-                        <span class="career-role-badge">서비스 기획 · 정규직</span>
-                        <ul class="career-desc">
-                            <li>서든어택 E-Sports 플랫폼 0→1 기획 전담</li>
-                            <li>서든어택 승부예측 이벤트 플랫폼 기획 · 운영</li>
-                            <li>Grafana 대시보드 기획 · SQL 자체 분석 체계 구축</li>
-                            <li>FPS 장르 라이브 서비스 기획 · 운영</li>
-                        </ul>
-                    </div>
-
-                    <!-- OP.GG -->
-                    <div class="career-item">
-                        <div class="career-header">
-                            <div class="company-logo-wrap">
-                                <img src="https://logo.clearbit.com/op.gg"
-                                    alt="OP.GG"
-                                    onerror="this.parentElement.outerHTML='<div class=\'company-logo-text\'>OP.GG</div>'">
-                            </div>
-                            <span class="career-company">오피지지 (OP.GG)</span>
-                        </div>
-                        <span class="career-period">2021.06 - 2024.05 · 3년</span>
-                        <span class="career-role-badge">서비스 기획/PM · 정규직</span>
-                        <ul class="career-desc">
-                            <li>MAU 150만 커뮤니티 서비스 기획 · PM</li>
-                            <li>PEEP 신규 프로덕트 기획 및 런칭</li>
-                            <li>AllT 모바일 앱 상위 기획</li>
-                        </ul>
-                    </div>
-
-                    <!-- 무신사 -->
-                    <div class="career-item">
-                        <div class="career-header">
-                            <div class="company-logo-wrap">
-                                <img src="https://logo.clearbit.com/musinsa.com"
-                                    alt="무신사"
-                                    onerror="this.parentElement.outerHTML='<div class=\'company-logo-text\'>MUSINSA</div>'">
-                            </div>
-                            <span class="career-company">무신사 (MUSINSA)</span>
-                        </div>
-                        <span class="career-period">2020.05 - 2021.06 · 1년 2개월</span>
-                        <span class="career-role-badge">서비스 기획 · 정규직</span>
-                        <ul class="career-desc">
-                            <li>신사업 SNAP 서비스 기획 및 초기 운영</li>
-                            <li>크리에이터 50명+ 영입 · 매니지먼트</li>
-                        </ul>
-                    </div>
-
-                    <!-- SNOW -->
-                    <div class="career-item">
-                        <div class="career-header">
-                            <div class="company-logo-wrap">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Logo_SNOW.svg"
-                                    alt="SNOW"
-                                    onerror="this.parentElement.outerHTML='<div class=\'company-logo-text\'>SNOW</div>'">
-                            </div>
-                            <span class="career-company">스노우 (SNOW)</span>
-                        </div>
-                        <span class="career-period">2019.06 - 2019.12 · 7개월</span>
-                        <span class="career-role-badge">서비스 기획 · 인턴</span>
-                        <ul class="career-desc">
-                            <li>ZEPETO WORLD 서비스 운영 및 기획</li>
-                            <li>MAU 490만 메타버스 앱 모니터링 · VOC 관리</li>
-                        </ul>
-                    </div>
-
-                    <!-- 메이크어스(딩고) -->
-                    <div class="career-item">
-                        <div class="career-header">
-                            <div class="company-logo-wrap">
-                                <img src="https://www.dingoglobal.com/theme/responsive_makeus/include/img/logo.svg"
-                                    alt="Dingo"
-                                    onerror="this.parentElement.outerHTML='<div class=\'company-logo-text\'>dingo</div>'">
-                            </div>
-                            <span class="career-company">메이크어스 (딩고)</span>
-                        </div>
-                        <span class="career-period">2018.08 - 2018.12 · 5개월</span>
-                        <span class="career-role-badge">채널 운영 · 인턴</span>
-                        <ul class="career-desc">
-                            <li>Dingo 채널 운영 및 콘텐츠 기획/제작</li>
-                            <li>2개월 채널 인터렉션 누적 110K 상승</li>
-                        </ul>
-                    </div>
-
-                    <!-- KBS -->
-                    <div class="career-item">
-                        <div class="career-header">
-                            <div class="company-logo-wrap">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/KBS_logo_2023.svg"
-                                    alt="KBS"
-                                    onerror="this.parentElement.outerHTML='<div class=\'company-logo-text\'>KBS</div>'">
-                            </div>
-                            <span class="career-company">한국방송공사 (KBS)</span>
-                        </div>
-                        <span class="career-period">2018.06 - 2018.08 · 3개월</span>
-                        <span class="career-role-badge">콘텐츠 기획 · 인턴</span>
-                        <ul class="career-desc">
-                            <li>KBS1 저널리즘 토크쇼 J 디지털 콘텐츠 기획/제작</li>
-                            <li>방송 주제 리서치 · 편집 구성안 제작 · 채널 운영</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="skills-section">
-                    <h2 class="section-title">Skills</h2>
-                    <div class="skill-tags">
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Grafana</span>
-                        <span class="skill-tag">Google Analytics</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Notion</span>
-                        <span class="skill-tag">JIRA</span>
-                        <span class="skill-tag">Confluence</span>
-                        <span class="skill-tag">데이터 분석</span>
-                        <span class="skill-tag">UX 기획</span>
-                        <span class="skill-tag">이벤트 기획</span>
-                        <span class="skill-tag">콘텐츠 전략</span>
-                    </div>
-                </div>
-
-                <div class="edu-section">
-                    <h2 class="section-title">Education &amp; Certs</h2>
-                    <div class="edu-item">
-                        <span class="edu-school">가천대학교</span>
-                        <span class="edu-detail">2014.03 - 2020.02 · 미디어커뮤니케이션학과 졸업</span>
-                    </div>
-                    <div class="cert-list">
-                        <div class="cert-item">
-                            <span>2026.03</span>
-                            <span>SQLD (데이터자격검정)</span>
-                        </div>
-                        <div class="cert-item">
-                            <span>2020.02</span>
-                            <span>GAIQ (Google Analytics Individual Qualification)</span>
-                        </div>
-                        <div class="cert-item">
-                            <span>2020.02</span>
-                            <span>OPIc IH · 영어 비즈니스 레벨</span>
-                        </div>
-                    </div>
-                </div>
-
-            </aside>
-
-            <main class="right-col right-section">
-                <section>
-                    <h2 class="section-title">Key Achievements</h2>
-                    <div class="achievement-list">
-                        <div class="achievement-item">
-                            <h3 class="achievement-title">이스포츠 리그 플랫폼 0→1 기획 전담: 서든어택 E-Sports</h3>
-                            <p class="achievement-desc">
-                                서든어택 공식 E-Sports 리그 플랫폼을 단독으로 0→1 기획 전담했습니다. 게임 서버 데이터 한계를 어드민으로 보완하는 데이터 계층 구조를
-                                설계하고, force_win / winner_team_id 필드 추가 등 개발팀과 API 스펙을 직접 협의했습니다. 라운드 그룹핑 기반 세트/매치 생성 시스템과
-                                실격·미출전 케이스별 3가지 분기 정책, 통계 무결성 보호를 위한 가짜 라운드 정책을 수립하여 데이터 신뢰도를 확보했습니다.
-                            </p>
-                        </div>
-                        <div class="achievement-item">
-                            <h3 class="achievement-title">DA 리소스 없이 자체 데이터 분석 체계 구축: Grafana / SQL</h3>
-                            <p class="achievement-desc">
-                                별도 DA 조직 없이 Grafana 대시보드를 기획·구축했습니다. 데이터 소스 정의부터 6개 콘텐츠 영역의 핵심 지표 설계, 시각화 전 과정을 주도하고
-                                SQL을 직접 작성해 자체 데이터 추출 및 분석을 수행했습니다. 이를 기반으로 S1 회고를 S2 설계에 반영하여 승부예측 참여 COUNT +18.76%,
-                                포인트 소비 UU +23.48%, 상점 교환 UU +16.52%를 달성했습니다.
-                            </p>
-                        </div>
-                        <div class="achievement-item">
-                            <h3 class="achievement-title">다수의 B2C 신규 서비스 0→1 기획 및 지표 성장 기여</h3>
-                            <p class="achievement-desc">
-                                OP.GG PEEP(Web RTC 기반 인게임 비디오 오버레이), 무신사 SNAP(스타일 공유 커뮤니티) 등 다수의 신규 서비스를 0→1로 기획하고
-                                런칭했습니다. PEEP은 디스콰이엇 트렌딩 앱 1위를 달성했으며, OP.GG 커뮤니티 이스포츠 연동 게시판 리뉴얼로 3개월 간 신규 연동 153,273명,
-                                게시글 생성수 +20% 성장을 이끌었습니다.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <h2 class="section-title">Projects</h2>
-                    <div class="service-list">
-
-                        <div class="service-item">
-                            <div class="service-info">
-                                <h3 class="service-name">서든어택 E-Sports 플랫폼</h3>
-                                <span class="service-company">넥슨코리아 · 2025.12 - 2026.04</span>
-                                <!-- URL 입력 필요 -->
-                                <span class="service-link"><a href="#" target="_blank">league.sa.nexon.com ↗</a></span>
-                            </div>
-                            <div class="service-details">
-                                <div class="service-task">
-                                    <b>리그 데이터 구조 기획 및 API 스펙 협업</b>
-                                    <ul>
-                                        <li>게임 서버 데이터 한계를 어드민으로 보완하는 데이터 계층 구조 설계</li>
-                                        <li>force_win / winner_team_id 필드 추가 등 개발팀과 데이터 구조 레벨 협의 직접 수행</li>
-                                        <li>레거시 엑셀 대회 데이터 가공·구조화 후 기획서 반영 (데이터 마이그레이션 기획)</li>
-                                    </ul>
-                                </div>
-                                <div class="service-task">
-                                    <b>매치 관리 어드민 기획</b>
-                                    <ul>
-                                        <li>라운드 그룹핑 기반 세트/매치 생성 시스템 설계</li>
-                                        <li>정상 플레이 / 실격-데이터 있음 / 실격-데이터 없음 3가지 케이스 분기 정책 수립</li>
-                                    </ul>
-                                </div>
-                                <div class="service-task">
-                                    <b>통계 무결성 정책 수립 및 선수 통계 서비스 기획</b>
-                                    <ul>
-                                        <li>미출전·미진행 케이스 대응 가짜 라운드 정책, KDA 0 처리 기준 수립</li>
-                                        <li>기존 유저 기록실 분석을 레퍼런스로 활용한 프로 선수 특화 지표 체계 도출</li>
-                                    </ul>
-                                </div>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">SQL</span>
-                                    <span class="tech-tag">Grafana</span>
-                                    <span class="tech-tag">Figma</span>
-                                    <span class="tech-tag">Notion</span>
-                                    <span class="tech-tag">JIRA</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <div class="service-info">
-                                <h3 class="service-name">서든어택 승부예측 서비스</h3>
-                                <span class="service-company">넥슨코리아 · 2025.03 - 2026.04</span>
-                                <!-- URL 입력 필요 -->
-                                <span class="service-link"><a href="#" target="_blank">sa.nexon.com ↗</a></span>
-                            </div>
-                            <div class="service-details">
-                                <div class="service-task">
-                                    <b>이벤트 플랫폼 기획 · 운영 및 지표 개선</b>
-                                    <ul>
-                                        <li>리그 시즌 유저 참여를 위한 승부예측 이벤트 플랫폼 기획 및 운영</li>
-                                        <li>S1 자체 회고 → S2 설계 반영: 포인트 소비 UU +23.48% / 참여 COUNT +18.76% / 상점 교환 UU +16.52%</li>
-                                        <li>참여 UU +5.88% 대비 COUNT +18.76% → 코어 유저 리텐션 강화 확인</li>
-                                    </ul>
-                                </div>
-                                <div class="service-task">
-                                    <b>Grafana 대시보드 기획 · 구축 및 자체 분석 체계 수립</b>
-                                    <ul>
-                                        <li>데이터 소스 정의 → 6개 콘텐츠 영역 지표 설계 → 시각화 전 과정 주도</li>
-                                        <li>SQL 직접 작성으로 자체 데이터 추출·분석 수행 (SQLD 취득)</li>
-                                    </ul>
-                                </div>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">SQL</span>
-                                    <span class="tech-tag">Grafana</span>
-                                    <span class="tech-tag">Figma</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <div class="service-info">
-                                <h3 class="service-name">OP.GG 커뮤니티 서비스</h3>
-                                <span class="service-company">오피지지 · 2023.06 - 2024.05</span>
-                                <!-- URL 입력 필요 -->
-                                <span class="service-link"><a href="#" target="_blank">op.gg/community ↗</a></span>
-                            </div>
-                            <div class="service-details">
-                                <div class="service-task">
-                                    <b>MAU 150만 커뮤니티 서비스 기획 · PM (Web/App/Admin)</b>
-                                    <ul>
-                                        <li>이스포츠 연동 게시판 리뉴얼: 3개월 간 신규 연동 153,273명, 게시글 생성수 +20%</li>
-                                        <li>인기글 알고리즘 'hotness score' 정책 기획, AI 댓글봇 GGBOT 기획 (유저 댓글 +7%)</li>
-                                        <li>GA Looker 대시보드 구축: 핵심 지표 설정 / 이벤트 트래킹 설계서 작성 (DA, 프론트 협업)</li>
-                                    </ul>
-                                </div>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Google Analytics</span>
-                                    <span class="tech-tag">Looker</span>
-                                    <span class="tech-tag">Figma</span>
-                                    <span class="tech-tag">JIRA</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <div class="service-info">
-                                <h3 class="service-name">PEEP</h3>
-                                <span class="service-company">오피지지 · 2021.06 - 2023.03</span>
-                                <!-- URL 입력 필요 -->
-                                <span class="service-link"><a href="#" target="_blank">peep.gg ↗</a></span>
-                            </div>
-                            <div class="service-details">
-                                <div class="service-task">
-                                    <b>Web RTC 기반 인게임 비디오 오버레이 신규 프로덕트 기획 · 런칭</b>
-                                    <ul>
-                                        <li>랜딩 페이지 기획·리뉴얼을 통한 로그인 CTA 퍼널 설계 및 CTR 3% 전환</li>
-                                        <li>디스콰이엇 트렌딩 앱 1위 달성, 얼리 액세스 유저 400명+ 모집 및 유저 인터뷰 진행</li>
-                                    </ul>
-                                </div>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Figma</span>
-                                    <span class="tech-tag">Google Analytics</span>
-                                    <span class="tech-tag">Notion</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <div class="service-info">
-                                <h3 class="service-name">무신사 SNAP</h3>
-                                <span class="service-company">무신사 · 2021.01 - 2021.05</span>
-                                <!-- URL 입력 필요 -->
-                                <span class="service-link"><a href="#" target="_blank">musinsa.com/snap ↗</a></span>
-                            </div>
-                            <div class="service-details">
-                                <div class="service-task">
-                                    <b>스타일 공유·탐색·구매 신규 서비스 초기 기획 및 운영</b>
-                                    <ul>
-                                        <li>계정 권한 정책(Master/Sub/Brand/Creator) 기획, 운영 정책/가이드 수립</li>
-                                        <li>스냅 크리에이터 50명+ 영입·매니지먼트, 300명 클로즈 베타 서비스 운영</li>
-                                    </ul>
-                                </div>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">Figma</span>
-                                    <span class="tech-tag">Notion</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-            </main>
         </div>
-    </div>
-</body>
+        <div class="header-right">
+            <div class="contact-info">
+                <span>010-2304-4172</span>
+                <span>dy000123@gmail.com</span>
+            </div>
+            <div class="link-info">
+                <a href="https://dakkie.notion.site/d6153dd304084a838fe40a160266f135" target="_blank">Notion Portfolio ↗</a>
+                <a href="https://linkedin.com/dakkie" target="_blank">LinkedIn ↗</a>
+            </div>
+        </div>
+    </header>
 
-</html>
+    <div class="main-content">
+
+        <!-- ── LEFT COLUMN ── -->
+        <aside class="left-col">
+            <h2 class="section-title">Career</h2>
+            <div class="career-list">
+
+                <!-- 넥슨코리아 -->
+                <div class="career-item">
+                    <div class="career-header">
+                        <span class="career-company">넥슨코리아 (NEXON)</span>
+                    </div>
+                    <span class="career-period">2025.01 - 재직중 · 1년 4개월</span>
+                    <span class="career-role-badge">서비스 기획 · 정규직</span>
+                    <ul class="career-desc">
+                        <li>서든어택 E-Sports 플랫폼 0→1 기획</li>
+                        <li>서든어택 승부예측 이벤트 플랫폼 기획 · 운영</li>
+                        <li>Grafana 대시보드 기획 · SQL 자체 분석 체계 구축</li>
+                        <li>FPS 장르 라이브 서비스 기획 · 운영</li>
+                    </ul>
+                </div>
+
+                <!-- OP.GG -->
+                <div class="career-item">
+                    <div class="career-header">
+                        <span class="career-company">오피지지 (OP.GG)</span>
+                    </div>
+                    <span class="career-period">2021.06 - 2024.05 · 3년</span>
+                    <span class="career-role-badge">서비스 기획/PM · 정규직</span>
+                    <ul class="career-desc">
+                        <li>MAU 150만 커뮤니티 서비스 기획 · PM</li>
+                        <li>PEEP 신규 프로덕트 기획 및 런칭</li>
+                        <li>AllT 모바일 앱 상위 기획</li>
+                    </ul>
+                </div>
+
+                <!-- 무신사 -->
+                <div class="career-item">
+                    <div class="career-header">
+                        <span class="career-company">무신사 (MUSINSA)</span>
+                    </div>
+                    <span class="career-period">2020.05 - 2021.06 · 1년 2개월</span>
+                    <span class="career-role-badge">서비스 기획 · 정규직</span>
+                    <ul class="career-desc">
+                        <li>신사업 SNAP 서비스 기획 및 초기 운영</li>
+                        <li>크리에이터 50명+ 영입 · 매니지먼트</li>
+                    </ul>
+                </div>
+
+                <!-- SNOW -->
+                <div class="career-item">
+                    <div class="career-header">
+                        <span class="career-company">스노우 (SNOW)</span>
+                    </div>
+                    <span class="career-period">2019.06 - 2019.12 · 7개월</span>
+                    <span class="career-role-badge">서비스 기획 · 인턴</span>
+                    <ul class="career-desc">
+                        <li>ZEPETO WORLD 서비스 운영 및 기획</li>
+                        <li>MAU 490만 메타버스 앱 모니터링 · VOC 관리</li>
+                    </ul>
+                </div>
+
+                <!-- 메이크어스(딩고) -->
+                <div class="career-item">
+                    <div class="career-header">
+                        <span class="career-company">메이크어스 (딩고)</span>
+                    </div>
+                    <span class="career-period">2018.08 - 2018.12 · 5개월</span>
+                    <span class="career-role-badge">채널 운영 · 인턴</span>
+                    <ul class="career-desc">
+                        <li>Dingo 채널 운영 및 콘텐츠 기획/제작</li>
+                        <li>2개월 채널 인터렉션 누적 110K 상승</li>
+                    </ul>
+                </div>
+
+                <!-- KBS -->
+                <div class="career-item">
+                    <div class="career-header">
+                        <span class="career-company">한국방송공사 (KBS)</span>
+                    </div>
+                    <span class="career-period">2018.06 - 2018.08 · 3개월</span>
+                    <span class="career-role-badge">콘텐츠 기획 · 인턴</span>
+                    <ul class="career-desc">
+                        <li>KBS1 저널리즘 토크쇼 J 디지털 콘텐츠 기획/제작</li>
+                        <li>방송 주제 리서치 · 편집 구성안 제작 · 채널 운영</li>
+                    </ul>
+                </div>
+
+            </div><!-- /.career-list -->
+
+            <!-- Skills -->
+            <div class="skills-section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Grafana</span>
+                    <span class="skill-tag">Google Analytics</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Notion</span>
+                    <span class="skill-tag">JIRA</span>
+                    <span class="skill-tag">Confluence</span>
+                    <span class="skill-tag">데이터 분석</span>
+                    <span class="skill-tag">UX 기획</span>
+                    <span class="skill-tag">이벤트 기획</span>
+                    <span class="skill-tag">콘텐츠 전략</span>
+                </div>
+            </div>
+
+            <!-- Education & Certs -->
+            <div class="edu-section">
+                <h2 class="section-title">Education &amp; Certs</h2>
+                <div class="edu-item">
+                    <span class="edu-school">가천대학교</span>
+                    <span class="edu-detail">2014.03 - 2020.02 · 미디어커뮤니케이션학과 졸업</span>
+                </div>
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <span>2026.03</span>
+                        <span>SQLD (데이터자격검정)</span>
+                    </div>
+                    <div class="cert-item">
+                        <span>2020.02</span>
+                        <span>GAIQ (Google Analytics Individual Qualification)</span>
+                    </div>
+                    <div class="cert-item">
+                        <span>2020.02</span>
+                        <span>OPIc IH · 영어 비즈니스 레벨</span>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- ── RIGHT COLUMN ── -->
+        <main class="right-col right-section">
+
+            <!-- Key Achievements -->
+            <section>
+                <h2 class="section-title">Key Achievements</h2>
+                <div class="achievement-list">
+
+                    <div class="achievement-item">
+                        <h3 class="achievement-title">서든어택 이스포츠 리그 통계 서비스 0→1 기획 및 데이터 구조 설계</h3>
+                        <p class="achievement-desc">
+                            서든어택 공식 E-Sports 리그 플랫폼의 통계 서비스를 신규 기획했습니다.
+                            개발팀과 협업하며 API 인터페이스 설계에 참여하고, 토너먼트→매치→세트→플레이어 스탯의 계층형 데이터 구조를 정의했습니다.
+                            게임 스튜디오와 직접 협의하며 리그 매치 데이터를 웹 서비스로 실시간 연동하는 양방향 스펙을 정의했으며,
+                            유저향 통계 서비스, 운영 어드민, 대회 현장 중계진용 대시보드까지 전 영역을 설계했습니다.
+                        </p>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h3 class="achievement-title">게임-웹 양방향 연동 보상 시스템 기획 및 데이터 기반 이벤트 운영 개선</h3>
+                        <p class="achievement-desc">
+                            유저가 승부를 예측하고 결과에 따라 인게임 재화를 지급받는 게임-웹 연동 이벤트 플랫폼을 기획했습니다.
+                            트래픽이 집중되는 이벤트 구간에서도 재화 지급이 누락·중복 없이 처리될 수 있도록 보상 처리 플로우와 예외 케이스 기준을 정의했습니다.
+                            별도 DA 조직 없이 Grafana 대시보드를 직접 기획·구축하고 SQL로 데이터를 분석해, S1 회고를 S2 설계에 반영한 결과
+                            승부예측 참여 COUNT +18.76%, 포인트 소비 UU +23.48%, 상점 교환 UU +16.52%를 달성했습니다.
+                        </p>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h3 class="achievement-title">게임·커뮤니티·커머스 장르 B2C 서비스 기획 및 신규 프로덕트 런칭 경험</h3>
+                        <p class="achievement-desc">
+                            게임, 커뮤니티, 패션 커머스 등 다양한 장르의 B2C 서비스를 기획하고 직접 런칭했습니다.
+                            OP.GG PEEP(인게임 비디오 오버레이)은 디스콰이엇 트렌딩 앱 1위를 달성했으며, OP.GG 커뮤니티 이스포츠 연동 리뉴얼로 3개월 간 신규 연동 153,273명, 게시글 생성수 +20% 성장을 이끌었습니다.
+                            신규 서비스 발굴부터 유저 지표 개선까지 B2C 프로덕트 전 주기를 경험했습니다.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <h2 class="section-title">Projects</h2>
+                <div class="service-list">
+
+                    <!-- SA League Platform -->
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h3 class="service-name">서든어택 E-Sports 플랫폼</h3>
+                            <span class="service-company">넥슨코리아 · 2025.12 - 2026.04</span>
+                            <span class="service-link"><a href="https://league.sa.nexon.com/home" target="_blank">league.sa.nexon.com ↗</a></span>
+                        </div>
+                        <div class="service-details">
+                            <div class="service-task">
+                                <b>게임 데이터 명세 및 통계 지표 정의</b>
+                                <ul>
+                                    <li>게임 원천 데이터를 웹 통계 지표로 변환하는 데이터 명세 작성, 토너먼트→매치→세트→플레이어 스탯 계층 구조 정의</li>
+                                    <li>주요 게임 지표(KDA, KPR 등) 계산식 정의, 포지션·무기군 분류 체계 수립 및 최소 출전 라운드 등 통계 신뢰도 조건 설계</li>
+                                    <li>게임 스튜디오와 협의해 매치 데이터 실시간 연동 스펙 정의, 실격·미출전 등 이상 케이스 데이터 처리 기준 수립</li>
+                                </ul>
+                            </div>
+                            <div class="service-task">
+                                <b>레이더차트 및 선수 비교 기능 기획</b>
+                                <ul>
+                                    <li>포지션별 강점 지표 선정, 리그 평균 기준 정규화 스케일 설계, 최소 출전 기준에 따른 데이터 노출 조건 등 선수 레이더차트 정책 수립</li>
+                                    <li>선수 간 레이더차트 오버레이 비교 및 시즌 간 성장 추이 비교 기능 기획, 포지션이 다른 선수의 상대 비교 기준 정의</li>
+                                    <li>2013년부터 약 15개 시즌 엑셀 대회 데이터 정규화 플로우 기획, 커리어 집계 기준(전체 누적 / 시즌별) 및 표시 로직 정의</li>
+                                </ul>
+                            </div>
+                            <div class="service-task">
+                                <b>매치 어드민 설계 및 QA 관리</b>
+                                <ul>
+                                    <li>세트/매치 생성 어드민, 실격 케이스 처리, 유저향 서비스·운영 어드민·중계진 대시보드 전 영역 설계</li>
+                                    <li>SHPD(라이브 QA) / SD(QM팀 2차 QA) 이원화 티켓 체계 운영 및 데이터 이슈 검증 우선순위 제안</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Grafana</span>
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Confluence</span>
+                                <span class="tech-tag">JIRA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 승부예측 -->
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h3 class="service-name">서든어택 승부예측 서비스</h3>
+                            <span class="service-company">넥슨코리아 · 2025.03 - 2026.04</span>
+                            <span class="service-link"><a href="https://league.sa.nexon.com/2026/season1" target="_blank">league.sa.nexon.com ↗</a></span>
+                        </div>
+                        <div class="service-details">
+                            <div class="service-task">
+                                <b>게임-웹 연동 보상 시스템 기획 및 이벤트 운영</b>
+                                <ul>
+                                    <li>유저 승부 예측 → 경기 결과 자동 반영 → 인게임 재화 지급까지의 게임-웹 연동 보상 플로우 기획</li>
+                                    <li>이벤트 트래픽 집중 구간 재화 누락·중복 방지를 위한 예외 케이스 처리 기준 정의</li>
+                                    <li>S1 회고 → S2 설계 반영: 포인트 소비 UU +23.48% / 참여 COUNT +18.76% / 상점 교환 UU +16.52%</li>
+                                    <li>참여 UU +5.88% 대비 COUNT +18.76% → 코어 유저 리텐션 강화 확인</li>
+                                </ul>
+                            </div>
+                            <div class="service-task">
+                                <b>Grafana 대시보드 기획 · 구축 및 자체 분석 체계 수립</b>
+                                <ul>
+                                    <li>데이터 소스 정의 → 6개 콘텐츠 영역 지표 설계 → 시각화 전 과정 주도</li>
+                                    <li>SQL 직접 작성으로 자체 데이터 추출·분석 수행 (SQLD 취득)</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Grafana</span>
+                                <span class="tech-tag">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OP.GG 커뮤니티 -->
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h3 class="service-name">OP.GG 커뮤니티 서비스</h3>
+                            <span class="service-company">오피지지 · 2023.06 - 2024.05</span>
+                            <span class="service-link"><a href="https://talk.op.gg/s/lol/all?sort=popular" target="_blank">talk.op.gg ↗</a></span>
+                        </div>
+                        <div class="service-details">
+                            <div class="service-task">
+                                <b>MAU 150만 커뮤니티 서비스 기획 · PM (Web/App/Admin)</b>
+                                <ul>
+                                    <li>이스포츠 연동 게시판 리뉴얼: 3개월 간 신규 연동 153,273명, 게시글 생성수 +20%</li>
+                                    <li>인기글 알고리즘 'hotness score' 정책 기획, AI 댓글봇 GGBOT 기획 (유저 댓글 +7%)</li>
+                                    <li>GA Looker 대시보드 구축: 핵심 지표 설정 / 이벤트 트래킹 설계서 작성 (DA, 프론트 협업)</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Google Analytics</span>
+                                <span class="tech-tag">Looker</span>
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">JIRA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PEEP -->
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h3 class="service-name">PEEP</h3>
+                            <span class="service-company">오피지지 · 2021.06 - 2023.03</span>
+                            <span class="service-link"><a href="https://www.producthunt.com/products/peep-2" target="_blank">producthunt.com ↗</a></span>
+                        </div>
+                        <div class="service-details">
+                            <div class="service-task">
+                                <b>Web RTC 기반 인게임 비디오 오버레이 신규 프로덕트 기획 · 런칭</b>
+                                <ul>
+                                    <li>랜딩 페이지 기획·리뉴얼을 통한 로그인 CTA 퍼널 설계 및 CTR 3% 전환</li>
+                                    <li>디스콰이엇 트렌딩 앱 1위 달성, 얼리 액세스 유저 400명+ 모집 및 유저 인터뷰 진행</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Google Analytics</span>
+                                <span class="tech-tag">Notion</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 무신사 SNAP -->
+                    <div class="service-item">
+                        <div class="service-info">
+                            <h3 class="service-name">무신사 SNAP</h3>
+                            <span class="service-company">무신사 · 2021.01 - 2021.05</span>
+                            <span class="service-link"><a href="https://www.musinsa.com/snap/main/recommend?gf=A" target="_blank">musinsa.com/snap ↗</a></span>
+                        </div>
+                        <div class="service-details">
+                            <div class="service-task">
+                                <b>스타일 공유·탐색·구매 신규 서비스 초기 기획 및 운영</b>
+                                <ul>
+                                    <li>계정 권한 정책(Master/Sub/Brand/Creator) 기획, 운영 정책/가이드 수립</li>
+                                    <li>스냅 크리에이터 50명+ 영입·매니지먼트, 300명 클로즈 베타 서비스 운영</li>
+                                </ul>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Notion</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div><!-- /.main-content -->
+
+</div><!-- /.container -->
+
+
+</body></html>
